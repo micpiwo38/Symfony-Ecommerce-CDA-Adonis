@@ -1,0 +1,72 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <div class="container bg-dark shadow mt-5">
+        {% if app.user.commandes|length > 0 %}
+            <h2 class="text-center text-success">Détails des commande</h2>
+
+            <div class="container shadow bg-dark">
+                {% for commande in app.user.commandes %}
+
+                    <div class="row bg-dark p-3 rounded shadow mt-3">
+                        <div class="bg-dark p-3 mt-3 rounded">
+                            <div class="text-center">
+                                <h4 class="text-warning">
+                                    Commande n° {{ commande.numeroCmd }}
+                                </h4>
+                                <h5 class="text-danger text-center">STATUT : {{ statut }}</h5>
+                                <p class="text-primary">Votre email : {{ commande.user.email }}</p>
+                                <p class="text-info">Date de la commande : {{ commande.createdAt|date('d/m/y') }}</p>
+                                <div class="d-flex justify-content-center">
+                                    <form method="post" action="{{ path('app_supprimer_commande', {'id': commande.id}) }}" onsubmit="return confirm('Confirmer la suppression de la commande ?');">
+                                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ commande.id) }}">
+                                        <button class="btn btn-danger mt-3">Annuler la commande</button>
+                                    </form>
+
+                                    <a href="{{path('app_paiement_stripe', {numero_cmd: commande.numeroCmd})}}" class="btn btn-success mt-3 mx-3">Payer via
+                                        Stripe
+                                    </a>
+
+                                    <a href="" class="btn btn-info mt-3 mx-3">
+                                        Exporter au format PDF
+                                    </a>
+                                    <a href="{{ path('app_produits_index') }}" class="btn btn-warning mt-3 mx-3">
+                                        Retour à l'accueil
+                                    </a>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        {% for details in details_commande[commande.id] %}
+                            <div class="col-md-3 col-sm-12">
+                                <div class="card h-100">
+                                    <div class="card-body text-center">
+                                        <h4 class="text-info">{{ details.produits.produitNom }}</h4>
+                                        <img src="img/produits{{ asset(details.produits.images[0]) }}" class="img-fluid" width="25%"
+                                             alt="{{ details.produits.produitNom }}" title="{{ details.produits.produitNom }}" />
+                                        <div class="text-info">Quantité(s) : {{ details.quantite }}</div>
+
+                                        <h5 class="text-success mt-3">Prix : {{ (details.prix / 100)|number_format(2, ',', ' ') }} €</h5>
+                                        {% set montant_total = details.prix * details.quantite %}
+                                        <hr>
+                                        <h4 class="text-warning">Sous-total : {{ (montant_total / 100)|number_format(2, ',', ' ') }} €</h4>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+            <h2 class="bg-warning p-3 text-white mt-3">TOTAL DE LA COMMANDE : {{ (total / 100)|number_format(2, ',', ' ') }} €</h2>
+        {% else %}
+            <div class="alert alert-danger mt-5">
+                <div class="p-3">
+                    <h4 class="text-warning">Vous n'avez aucune commande !</h4>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

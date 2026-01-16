@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <div class="container bg-dark p-3 mt-3 w-25">
+        {% for flash_error in app.flashes('verify_email_error') %}
+            <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+        {% endfor %}
+
+        <h1 class="text-warning">Inscription</h1>
+
+        <div class="alert alert-danger p-3 mt-3" id="errors">
+            Merci de remplir tous les champs
+        </div>
+
+        {{ form_errors(registrationForm) }}
+
+        {{ form_start(registrationForm, {'attr': {'id': 'registration_form'}}) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Mot de passe'
+        }) }}
+        {{ form_row(registrationForm.agreeTerms) }}
+
+        <button id="registration_btn" type="submit" class="btn btn-success">Inscription</button>
+        {{ form_end(registrationForm) }}
+    </div>
+
+    <script>
+        //Champ email
+        const email = document.getElementById("registration_form_email");
+        //Champ mot de passe
+        const password = document.getElementById("registration_form_plainPassword");
+        //Bouton de validation
+        const registration_btn = document.getElementById("registration_btn");
+        //Alerte merci de remplir tous les champs
+        const errors = document.getElementById("errors");
+
+        const change_btn_state = () => {
+            //Si les champ sont vide => on ajoute attribut HTML disabled
+            if(email.value === "" && password.value === ""){
+                registration_btn.setAttribute('disabled', 'disabled');
+            }else{
+                //Sinon on supprimer l'attribut disabled et on supprimer la <div id="errors"> du DOM
+                registration_btn.removeAttribute('disabled');
+                errors.remove();
+            }
+        }
+        //Inspecter les changements du DOM
+        email.addEventListener('change', change_btn_state);
+        password.addEventListener('change', change_btn_state);
+        change_btn_state()
+    </script>
+{% endblock %}

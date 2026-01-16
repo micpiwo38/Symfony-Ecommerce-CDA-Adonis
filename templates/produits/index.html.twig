@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Afficher Produits
+{% endblock %}
+
+{% block body %}
+    <div class="container shadow mt-5 p-3 bg-dark">
+        <div class="text-center">
+            <h2 class="text-warning">NOS PRODUITS</h2>
+        </div>
+        <div class="row">
+            {% for produit in produits %}
+                <div class="col-md-3 col-sm-12 mt-5">
+                    <div class="card h-100 mt-3 rounded">
+                        <h5 class="text-info text-center">{{ produit.produitNom }}</h5>
+                        <div class="p-3 rounded">
+                            <img src="../img/produits{{ asset(produit.images[0]) }}" title="" class="img-fluid mt-3" width="100%" alt=""/>
+                        </div>
+                        <div class="card-body">
+
+                            <p class="text-success">
+                                PRIX : {{ (produit.produitPrix / 100)|number_format(2, ',', ' ') }} €
+                            </p>
+                            <em class="text-warning">Propriétaire : {{ produit.user.email }}</em>
+                            <a href="{{ path('app_produits_show', {id: produit.id}) }}" class="btn btn-warning mt-3">
+                                Plus d'infos
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+{% endblock %}

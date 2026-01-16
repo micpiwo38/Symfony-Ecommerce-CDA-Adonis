@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    Succes paiement commande
+{% endblock %}
+
+{% block body %}
+    <div class="container text-center mt-3 p-3 w-50">
+        <div class="alert alert-success">
+            <h2 class="text-white">Votre paiement à été accepter !</h2>
+
+            <p>
+                Merci pour votre commande ! Si vous avez des quetions ?
+                <a href="mailto:orders@example.com">ecommerce@sav.com</a>.
+            <div>
+                <a href="{{path('app_produits_index')}}" class="btn btn-info mt-3">Accueil</a>
+            </div>
+            </p>
+        </div>
+    </div>
+{% endblock %}

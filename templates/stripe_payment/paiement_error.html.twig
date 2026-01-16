@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    Erreur paiement commande
+{% endblock %}
+
+{% block body %}
+    <div class="alert alert-danger mt-3 p-3">
+        <h2 class="text-white">Votre paiement à été refuser !</h2>
+        <p>
+            Merci pour votre commande ! Si vous avez des quetions ?
+            <a class="btn btn-warning mt-3" href="{{path('app_resume_commande')}}">Recommencer</a>.
+        </p>
+    </div>
+{% endblock %}

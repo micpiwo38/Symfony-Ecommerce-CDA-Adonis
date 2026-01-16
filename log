@@ -1,0 +1,90 @@
+[33mcommit fb9c20f867e732effef7b01b2ff9ce5953408797[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: micpiwo38 <michel.michael38@gmail.com>
+Date:   Fri Jan 16 15:04:47 2026 +0100
+
+    Signed-off-by: micpiwo38 <michel.michael38@gmail.com>
+
+[33mcommit 8b772d9dd0fad5c7e9f993e7a9671dda8fba7cea[m
+Author: micpiwo38 <michel.michael38@gmail.com>
+Date:   Fri Jan 16 14:57:18 2026 +0100
+
+    Signed-off-by: micpiwo38 <michel.michael38@gmail.com>ok
+
+[33mcommit 5fd003debdf42ab76dd894f850d30eae305e5d92[m
+Author: micpiwo38 <michel.michael38@gmail.com>
+Date:   Fri Jan 16 14:56:14 2026 +0100
+
+    Signed-off-by: micpiwo38 <michel.michael38@gmail.com>No env
+
+[33mcommit 02150db32ebc61ec23ea3c31a41ae707ca591482[m
+Author: micpiwo38 <michel.michael38@gmail.com>
+Date:   Fri Jan 16 14:55:18 2026 +0100
+
+    Signed-off-by: micpiwo38 <michel.michael38@gmail.com>alors ?
+
+[33mcommit a11a79e9a22feae6593f7082db5be5a329d84df9[m
+Author: micpiwo38 <michel.michael38@gmail.com>
+Date:   Fri Jan 16 14:53:52 2026 +0100
+
+    Signed-off-by: micpiwo38 <michel.michael38@gmail.com>Re test stripe
+
+[33mcommit 0fc2e63c4f02778e7dee7f25b06badc24ec34af7[m
+Author: micpiwo38 <michel.michael38@gmail.com>
+Date:   Fri Jan 16 14:51:08 2026 +0100
+
+    Signed-off-by: micpiwo38 <michel.michael38@gmail.com>Test de stripe
+
+[33mcommit 4075d4d13b9f4cda6355d76ed7cf5ce947387e10[m
+Author: micpiwo38 <michel.michael38@gmail.com>
+Date:   Thu Jan 15 20:08:52 2026 +0100
+
+    Signed-off-by: micpiwo38 <michel.michael38@gmail.com>
+
+[33mcommit b97563a924ed44977bf0ce0b9d17085eba14f1cd[m
+Author: micpiwo38 <michel.michael38@gmail.com>
+Date:   Thu Jan 15 20:08:11 2026 +0100
+
+    Signed-off-by: micpiwo38 <michel.michael38@gmail.com>
+
+[33mcommit 1e967eef2509e91de581158ff0afbd408c67eda7[m
+Author: micpiwo38 <michel.michael38@gmail.com>
+Date:   Thu Jan 15 20:07:24 2026 +0100
+
+    Signed-off-by: micpiwo38 <michel.michael38@gmail.com>
+
+[33mcommit c4ca64e570f478c3b382ba9fa19e30d86f4a8fe4[m
+Author: micpiwo38 <michel.michael38@gmail.com>
+Date:   Thu Jan 15 20:06:56 2026 +0100
+
+    Signed-off-by: micpiwo38 <michel.michael38@gmail.com>Stripe
+    Signed-off-by: micpiwo38 <michel.michael38@gmail.com>S
+
+[33mcommit 391f8d6f0d232c7481ecfb9c89a9d3ecb33d0b81[m
+Author: micpiwo38 <michel.michael38@gmail.com>
+Date:   Thu Jan 15 20:04:24 2026 +0100
+
+    Signed-off-by: micpiwo38 <michel.michael38@gmail.com>Mise en place de stripe
+
+[33mcommit 2f030fc7a640aeba559b53bd4d55dd32f1b732d1[m
+Author: micpiwo38 <michel.michael38@gmail.com>
+Date:   Thu Jan 8 20:26:51 2026 +0100
+
+    Signed-off-by: micpiwo38 <michel.michael38@gmail.com>mise en place du panier
+
+[33mcommit da5adf9b2560cd4f767c134e23529a5710c68b44[m
+Author: micpiwo38 <michel.michael38@gmail.com>
+Date:   Thu Jan 8 13:08:05 2026 +0100
+
+    Signed-off-by: micpiwo38 <michel.michael38@gmail.com>Symfony sans panier
+
+[33mcommit 5f80ba8a7436e3e8d74d427cd2741dbfed2db67c[m
+Author: micpiwo38 <michel.michael38@gmail.com>
+Date:   Thu Dec 18 10:11:25 2025 +0100
+
+    Add webapp packages
+
+[33mcommit 394fd12a14484f5680fde2a4f6947e13884c083c[m
+Author: micpiwo38 <michel.michael38@gmail.com>
+Date:   Thu Dec 18 10:09:32 2025 +0100
+
+    Add initial set of files

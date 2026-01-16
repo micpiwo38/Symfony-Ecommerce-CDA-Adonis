@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produits{% endblock %}
+
+{% block body %}
+    <div class="container shadow mt-5">
+        <h1>Détail du produit {{ produit.produitNom }}</h1>
+
+        <table class="table">
+            <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ produit.id }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>
+                    <img src="../img/produits{{ asset(produit.images[0]) }}" title="" class="img-fluid mt-3" width="25%" alt=""/>
+                </td>
+            </tr>
+            <tr>
+                <th>Produit_nom</th>
+                <td>{{ produit.produitNom }}</td>
+            </tr>
+            <tr>
+                <th>Produit_description</th>
+                <td>{{ produit.produitDescription }}</td>
+            </tr>
+            <tr>
+                <th>Produit_prix</th>
+                <td>
+                    <p class="text-success">
+                        PRIX : {{ (produit.produitPrix / 100)|number_format(2, ',', ' ') }} €
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Produit_slug</th>
+                <td>{{ produit.produitSlug }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ produit.createdAt ? produit.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ produit.updatedAt ? produit.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <a class="btn btn-info" href="{{ path('app_produits_index') }}">Retour</a>
+        <a class="btn btn-warning" href="{{ path('app_panier',{id: produit.id}) }}">Ajouter au panier</a>
+    </div>
+{% endblock %}

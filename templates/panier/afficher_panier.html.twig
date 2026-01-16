@@ -1,0 +1,81 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    Votre panier
+{% endblock %}
+
+{% block body %}
+    {{ dump(panier) }}
+    <div class="container shadow bg-dark p-3">
+        <h2 class="text-center text-danger mt-3">VOTRE PANIER</h2>
+        <table class="table table-hover table-striped mt-3 table-dark">
+            <thead>
+            <tr class="table-primary">
+                <th scope="col">Nom</th>
+                <th scope="col">Categorie</th>
+                <th scope="col">Image</th>
+                <th scope="col">Desctiption</th>
+                <th scope="col">Prix</th>
+                <th scope="col">Quantité(s)</th>
+                <th scope="col">Total</th>
+                <th scope="col">Soustraire</th>
+                <th scope="col">Ajouter</th>
+                <th scope="col">Supprimer</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for commande in panier %}
+
+                <tr>
+                    <td>{{commande.produit.produitNom}}</td>
+                    <td>{{commande.produit.categorie.categorieNom}}</td>
+                    <td>
+                        <div class="d-flex justify-content-center">
+                            {% if commande.produit.images is not empty %}
+                                {# On accède au premier objet Image, puis à sa propriété (ex: nom) #}
+                                <img src="{{ asset('img/produits/' ~ commande.produit.images[0]) }}"
+                                     class="img-fluid"
+                                     alt="{{ commande.produit.produitNom }}"
+                                     width="25%" />
+                            {% else %}
+                                {# Image par défaut si le produit n'en a pas #}
+                                <img src="{{ asset('img/produits/default.jpg') }}" class="img-fluid" width="15%" />
+                            {% endif %}
+                        </div>
+                    </td>
+                    <td>{{commande.produit.produitDescription|u.truncate(20, '...')}}</td>
+
+                    <td>{{ (commande.produit.produitPrix / 100)|number_format(2, ',', ' ') }} €</td>
+                    <td class="text-warning"><b>{{commande.quantite}}</b></td>
+                    <td>{{commande.quantite * commande.produit.produitPrix}} €</td>
+                    <td>
+                        <a href="{{path('app_supprimer_quantite_panier', {id: commande.produit.id})}}"
+                           class="btn btn-warning">-</a>
+                    </td>
+                    <td>
+                        <a href="{{path('app_ajouter_quantite_panier', {id: commande.produit.id})}}"
+                           class="btn btn-success">+</a>
+                    </td>
+                    <td>
+                        <a href="{{path('app_supprimer_produit_panier', {id: commande.produit.id})}}"
+                           class="btn btn-danger">Supprimer</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="10" class="text-danger">Votre panier est vide</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center container bg-dark mt-3">
+        <h3 class="text-success">Total de la commande : {{ (total / 100)|number_format(2, ',', ' ')}} €</h3>
+        <a href="{{path('app_vider_panier')}}" class="btn btn-primary">Vider le panier</a>
+        <hr>
+        <a href="{{ path('app_produits_index') }}" class="btn btn-info mb-3">Continuer mes achats</a>
+        <a href="{{path('app_valider_commandes')}}" class="btn btn-success mb-3 mx-3">Valider la commande</a>
+
+    </div>
+
+{% endblock %}
