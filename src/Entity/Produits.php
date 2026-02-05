@@ -2,61 +2,86 @@
 
 namespace App\Entity;
 
+//Appel de la classe ApiResource
+use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\Get;
+use ApiPlatform\Metadata\GetCollection;
+use ApiPlatform\Metadata\Post;
+use ApiPlatform\Metadata\Put;
+use ApiPlatform\Metadata\Delete;
+
 use App\Repository\ProduitsRepository;
 use DateTimeImmutable;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
+
 
 #[ORM\Entity(repositoryClass: ProduitsRepository::class)]
+//Ajout de la directive ApiResource
+#[ApiResource( operations: [ new GetCollection(normalizationContext: ['groups' => ['produits:list']]), new Get(normalizationContext: ['groups' => ['produits:detail']]), new Post(denormalizationContext: ['groups' => ['produits:write']]), new Put(denormalizationContext: ['groups' => ['produits:write']]), new Delete() ], )]
 class Produits
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(['produits:list', 'produits:detail'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(['produits:list', 'produits:detail', 'produits:write'])]
     private ?string $produit_nom = null;
 
     #[ORM\Column(type: Types::TEXT)]
-    private ?string $produit_description = null;
+    #[Groups(['produits:list', 'produits:detail', 'produits:write'])]
+    private ?string $produit_description = "" ?? null;
 
     #[ORM\Column]
-    private ?float $produit_prix = null;
+    #[Groups(['produits:list', 'produits:detail', 'produits:write'])]
+    private ?float $produit_prix = 0 ?? null;
 
     #[ORM\Column(length: 255)]
-    private ?string $produit_slug = null;
+    #[Groups(['produits:list', 'produits:detail', 'produits:write'])]
+    private ?string $produit_slug = "" ?? null;
 
     #[ORM\Column]
+    #[Groups(['produits:list', 'produits:detail'])]
     private ?\DateTimeImmutable $createdAt = null;
 
     #[ORM\Column]
+    #[Groups(['produits:list', 'produits:detail'])]
     private ?\DateTimeImmutable $updatedAt = null;
 
-    #[ORM\OneToOne(inversedBy: 'produits', cascade: ['persist', 'remove'])]
+    #[ORM\ManyToOne(inversedBy: 'produits', cascade: ['persist'])]
     #[ORM\JoinColumn(nullable: false)]
+    #[Groups(['produits:detail', 'produits:write'])]
     private ?References $reference = null;
 
-    #[ORM\ManyToOne(inversedBy: 'produits')]
+    #[ORM\ManyToOne(inversedBy: 'produits', cascade: ['persist'])]
     #[ORM\JoinColumn(nullable: false)]
+    #[Groups(['produits:list', 'produits:write'])]
     private ?Categories $categorie = null;
 
     #[ORM\ManyToMany(targetEntity: Distributeurs::class, inversedBy: 'produits')]
+    #[Groups(['produits:detail', 'produits:write'])]
     private Collection $distributeur;
 
     #[ORM\OneToMany(mappedBy: 'produit', targetEntity: Images::class, cascade: ['persist', 'remove'], orphanRemoval: true)]
+    #[Groups(['produits:list', 'produits:write'])]
     private Collection $images;
 
-    #[ORM\ManyToOne(inversedBy: 'produits')]
+    #[ORM\ManyToOne(inversedBy: 'produits', cascade: ['persist'])]
     #[ORM\JoinColumn(nullable: false)]
+    #[Groups(['produits:detail', 'produits:write'])]
     private ?User $user = null;
 
     /**
      * @var Collection<int, CommandeDetails>
      */
     #[ORM\OneToMany(targetEntity: CommandeDetails::class, mappedBy: 'produits')]
+    #[Groups(['produits:detail'])]
     private Collection $commandeDetails;
 
     public function __construct()
@@ -145,7 +170,7 @@ class Produits
         return $this->reference;
     }
 
-    public function setReference(References $reference): self
+    public function setReference(?References $reference): self
     {
         $this->reference = $reference;
         return $this;
@@ -229,7 +254,7 @@ class Produits
         return $this->commandeDetails;
     }
 
-    public function addCommandeDetail(CommandeDetails $commandeDetail): static
+    public function addCommandeDetail(CommandeDetails $commandeDetail): self
     {
         if (!$this->commandeDetails->contains($commandeDetail)) {
             $this->commandeDetails->add($commandeDetail);
@@ -239,7 +264,7 @@ class Produits
         return $this;
     }
 
-    public function removeCommandeDetail(CommandeDetails $commandeDetail): static
+    public function removeCommandeDetail(CommandeDetails $commandeDetail): self
     {
         if ($this->commandeDetails->removeElement($commandeDetail)) {
             // set the owning side to null (unless already changed)

@@ -11,8 +11,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="820ec407-df5d-4102-bad0-2243aa4adcec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/api_platform.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/dama_doctrine_test_bundle.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/nelmio_cors.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/routes/api_platform.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produits/69847c833f963.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produits/69847c8340046.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produits/6984dd6b7f3b0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produits/6984dd6b7fc37.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ApiResource/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EventSubscriber/UrlNotFoundSubscriber.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Api/ProduitApiTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Fixtures/ProduitsFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.test" beforeDir="false" afterPath="$PROJECT_DIR$/.env.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sf7_cda_adonis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sf7_cda_adonis.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/reference.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/reference.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/importmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.dist.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.dist.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProduitsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProduitsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Categories.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/CommandeDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/CommandeDetails.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Commandes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Commandes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Distributeurs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Distributeurs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Images.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Images.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Produits.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Produits.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/References.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/References.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/navbar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/produits/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/produits/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/produits/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/produits/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,6 +218,26 @@
       <path value="$PROJECT_DIR$/vendor/twig/string-extra" />
       <path value="$PROJECT_DIR$/vendor/twig/intl-extra" />
       <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/validator" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/symfony" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/state" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/serializer" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/openapi" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/metadata" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/jsonld" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/json-schema" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/hydra" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/http-cache" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/documentation" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/doctrine-orm" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/doctrine-common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/nelmio/cors-bundle" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/negotiation" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/core" />
+      <path value="$PROJECT_DIR$/vendor/dama/doctrine-test-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
     </include_path>
   </component>
   <component name="ProjectId" id="37ySXcbhk6sfIAHdPiup75z6qsU" />
@@ -199,15 +252,17 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/stripe_payment" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Mic_Works\Projets_Symfony\sf7_cda_adonis\tests\Api" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Mic_Works\Projets_Symfony\sf7_cda_adonis\templates\stripe_payment" />
     </key>
@@ -231,6 +286,14 @@
       <workItem from="1768480884056" duration="2072000" />
       <workItem from="1768499998905" duration="4054000" />
       <workItem from="1768571562184" duration="537000" />
+      <workItem from="1768989464037" duration="22000" />
+      <workItem from="1769105228960" duration="1477000" />
+      <workItem from="1770196946064" duration="7302000" />
+      <workItem from="1770205100601" duration="702000" />
+      <workItem from="1770217294808" duration="7154000" />
+      <workItem from="1770283481973" duration="7539000" />
+      <workItem from="1770310228184" duration="18000" />
+      <workItem from="1770314865232" duration="3113000" />
     </task>
     <servers />
   </component>
@@ -257,22 +320,36 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="770" y="394" key="#Composer/-1920.0.1920.1032/0.0.1920.1032@0.0.1920.1032" timestamp="1767874120405" />
-    <state x="765" y="198" key="#com.intellij.ide.util.MemberChooser" timestamp="1767899385014">
+    <state x="711" y="318" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1770290253021">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="765" y="198" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1032/0.0.1920.1032@0.0.1920.1032" timestamp="1767899385014" />
+    <state x="711" y="318" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1032/0.0.1920.1032@0.0.1920.1032" timestamp="1770290253021" />
+    <state x="765" y="198" key="#com.intellij.ide.util.MemberChooser" timestamp="1770285272187">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="765" y="198" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1032/0.0.1920.1032@0.0.1920.1032" timestamp="1770285272187" />
     <state x="690" y="261" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1767877750903">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="690" y="261" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1032/0.0.1920.1032@0.0.1920.1032" timestamp="1767877750903" />
-    <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1767890390404">
+    <state x="667" y="182" key="FileChooserDialogImpl" timestamp="1770310244136">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="740" y="271" key="FileChooserDialogImpl/-1920.0.1920.1032/0.0.1920.1032@0.0.1920.1032" timestamp="1767890390404" />
-    <state x="602" y="140" key="SettingsEditor" timestamp="1767899212364">
+    <state x="-1253" y="182" key="FileChooserDialogImpl/-1920.0.1920.1032/0.0.1920.1032@-1920.0.1920.1032" timestamp="1769106746767" />
+    <state x="667" y="182" key="FileChooserDialogImpl/-1920.0.1920.1032/0.0.1920.1032@0.0.1920.1032" timestamp="1770310244136" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1770316216770">
+      <screen x="-1920" y="0" width="1920" height="1032" />
+    </state>
+    <state width="196" height="457" key="HiddenNamespacesPopup/-1920.0.1920.1032/0.0.1920.1032@-1920.0.1920.1032" timestamp="1770316216770" />
+    <state width="196" height="457" key="HiddenNamespacesPopup/-1920.0.1920.1032/0.0.1920.1032@0.0.1920.1032" timestamp="1770284700955" />
+    <state x="698" y="239" key="NewPhpClassDialog" timestamp="1770285144957">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="-1318" y="140" key="SettingsEditor/-1920.0.1920.1032/0.0.1920.1032@-1920.0.1920.1032" timestamp="1767896328093" />
+    <state x="698" y="239" key="NewPhpClassDialog/-1920.0.1920.1032/0.0.1920.1032@0.0.1920.1032" timestamp="1770285144957" />
+    <state x="-1318" y="140" key="SettingsEditor" timestamp="1769106014981">
+      <screen x="-1920" y="0" width="1920" height="1032" />
+    </state>
+    <state x="-1318" y="140" key="SettingsEditor/-1920.0.1920.1032/0.0.1920.1032@-1920.0.1920.1032" timestamp="1769106014981" />
     <state x="602" y="140" key="SettingsEditor/-1920.0.1920.1032/0.0.1920.1032@0.0.1920.1032" timestamp="1767899212364" />
   </component>
 </project>

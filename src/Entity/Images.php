@@ -2,11 +2,14 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiResource;
 use App\Repository\ImagesRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: ImagesRepository::class)]
+#[ApiResource]
 class Images
 {
     #[ORM\Id]
@@ -15,6 +18,7 @@ class Images
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(['produits:list'])]
     private ?string $image_path = null;
 
     #[ORM\ManyToOne(targetEntity: Produits::class, inversedBy: 'images')]

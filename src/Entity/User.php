@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiResource;
 use App\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -9,10 +10,12 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[ORM\UniqueConstraint(name: 'UNIQ_IDENTIFIER_EMAIL', fields: ['email'])]
 #[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
+#[ApiResource]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
@@ -21,7 +24,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?int $id = null;
 
     #[ORM\Column(length: 180)]
-    private ?string $email = null;
+    #[Groups(['produits:detail', 'produits:write'])]
+    private ?string $email = "";
 
     /**
      * @var list<string> The user roles
@@ -40,7 +44,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @var string The hashed password
      */
     #[ORM\Column]
-    private ?string $password = null;
+    #[Groups(['produits:detail', 'produits:write'])]
+    private ?string $password = "uniqid(): %s\r\n";
 
     /**
      * @var Collection<int, Produits>
@@ -64,7 +69,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->email;
     }
 
-    public function setEmail(string $email): static
+    public function setEmail(string $email): self
     {
         $this->email = $email;
 
@@ -96,7 +101,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @param list<string> $roles
      */
-    public function setRoles(array $roles): static
+    public function setRoles(array $roles): self
     {
         $this->roles = $roles;
 
@@ -111,7 +116,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->password;
     }
 
-    public function setPassword(string $password): static
+    public function setPassword(string $password): self
     {
         $this->password = $password;
 
@@ -143,7 +148,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->produits;
     }
 
-    public function addProduit(Produits $produit): static
+    public function addProduit(Produits $produit): self
     {
         if (!$this->produits->contains($produit)) {
             $this->produits->add($produit);
@@ -153,7 +158,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function removeProduit(Produits $produit): static
+    public function removeProduit(Produits $produit): self
     {
         if ($this->produits->removeElement($produit)) {
             // set the owning side to null (unless already changed)
@@ -166,9 +171,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     //Conversion la clé etrangère Produits.user_id en chaine de caractère
-    public function __toString()
+    public function __toString(): string
     {
-        return $this->email;
+        return $this->email ?? "";
     }
 
     /**
@@ -179,7 +184,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->commandes;
     }
 
-    public function addCommande(Commandes $commande): static
+    public function addCommande(Commandes $commande): self
     {
         if (!$this->commandes->contains($commande)) {
             $this->commandes->add($commande);
@@ -189,7 +194,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function removeCommande(Commandes $commande): static
+    public function removeCommande(Commandes $commande): self
     {
         if ($this->commandes->removeElement($commande)) {
             // set the owning side to null (unless already changed)

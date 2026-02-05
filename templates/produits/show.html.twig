@@ -15,7 +15,12 @@
             <tr>
                 <th>Image</th>
                 <td>
-                    <img src="../img/produits{{ asset(produit.images[0]) }}" title="" class="img-fluid mt-3" width="25%" alt=""/>
+                    {% for image in produit.images %}
+                        <img src="{{ asset('img/produits/' ~ image.imagePath) }}"
+                             title="{{ produit.produitNom }}"
+                             class="img-fluid mt-3" width="25%"
+                             alt="{{ produit.produitNom }}"/>
+                    {% endfor %}
                 </td>
             </tr>
             <tr>

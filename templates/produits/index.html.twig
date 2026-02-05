@@ -7,6 +7,7 @@
     <div class="container shadow mt-5 p-3 bg-dark">
         <div class="text-center">
             <h2 class="text-warning">NOS PRODUITS</h2>
+            <a href="{{ path('app_produits_api') }}" class="btn btn-warning mt-3">API</a>
         </div>
         <div class="row">
             {% for produit in produits %}
@@ -14,7 +15,12 @@
                     <div class="card h-100 mt-3 rounded">
                         <h5 class="text-info text-center">{{ produit.produitNom }}</h5>
                         <div class="p-3 rounded">
-                            <img src="../img/produits{{ asset(produit.images[0]) }}" title="" class="img-fluid mt-3" width="100%" alt=""/>
+                            {% for image in produit.images %}
+                                <img src="{{ asset('img/produits/' ~ image.imagePath) }}"
+                                     title="{{ produit.produitNom }}"
+                                     class="img-fluid mt-3" width="25%"
+                                     alt="{{ produit.produitNom }}"/>
+                            {% endfor %}
                         </div>
                         <div class="card-body">
 

@@ -2,12 +2,15 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiResource;
 use App\Repository\DistributeursRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: DistributeursRepository::class)]
+#[ApiResource]
 class Distributeurs
 {
     #[ORM\Id]
@@ -16,6 +19,7 @@ class Distributeurs
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(['produits:detail'])]
     private ?string $distributeur_nom = null;
 
     /**
@@ -39,7 +43,7 @@ class Distributeurs
         return $this->distributeur_nom;
     }
 
-    public function setDistributeurNom(string $distributeur_nom): static
+    public function setDistributeurNom(string $distributeur_nom): self
     {
         $this->distributeur_nom = $distributeur_nom;
 
@@ -54,7 +58,7 @@ class Distributeurs
         return $this->produits;
     }
 
-    public function addProduit(Produits $produit): static
+    public function addProduit(Produits $produit): self
     {
         if (!$this->produits->contains($produit)) {
             $this->produits->add($produit);
@@ -64,7 +68,7 @@ class Distributeurs
         return $this;
     }
 
-    public function removeProduit(Produits $produit): static
+    public function removeProduit(Produits $produit): self
     {
         if ($this->produits->removeElement($produit)) {
             $produit->removeDistributeur($this);

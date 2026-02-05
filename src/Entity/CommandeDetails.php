@@ -2,10 +2,13 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiResource;
 use App\Repository\CommandeDetailsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: CommandeDetailsRepository::class)]
+#[ApiResource]
 class CommandeDetails
 {
     #[ORM\Id]
@@ -14,9 +17,11 @@ class CommandeDetails
     private ?int $id = null;
 
     #[ORM\Column]
+    #[Groups(['produits:detail'])]
     private ?int $quantite = null;
 
     #[ORM\Column]
+    #[Groups(['produits:detail'])]
     private ?float $prix = null;
 
     #[ORM\ManyToOne(inversedBy: 'commandeDetails')]

@@ -18,12 +18,30 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/amphp/serialization" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/amphp/socket" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/amphp/sync" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/api-platform/core" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/api-platform/doctrine-common" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/api-platform/doctrine-orm" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/api-platform/documentation" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/api-platform/http-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/api-platform/hydra" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/api-platform/json-schema" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/api-platform/jsonld" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/api-platform/metadata" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/api-platform/openapi" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/api-platform/serializer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/api-platform/state" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/api-platform/symfony" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/api-platform/validator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/dama/doctrine-test-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/daverandom/libdns" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/collections" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/common" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/data-fixtures" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/dbal" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/deprecations" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/doctrine-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/event-manager" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/inflector" />
@@ -42,6 +60,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/masterminds/html5" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nelmio/cors-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phar-io/manifest" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phar-io/version" />
@@ -162,6 +181,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/twig/string-extra" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/twig/twig" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/willdurand/negotiation" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
