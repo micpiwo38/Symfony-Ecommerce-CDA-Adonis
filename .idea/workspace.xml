@@ -7,45 +7,17 @@
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="820ec407-df5d-4102-bad0-2243aa4adcec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/packages/api_platform.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/dama_doctrine_test_bundle.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/nelmio_cors.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/api_platform.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/produits/69847c833f963.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/produits/69847c8340046.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/produits/6984dd6b7f3b0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/produits/6984dd6b7fc37.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ApiResource/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventSubscriber/UrlNotFoundSubscriber.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Api/ProduitApiTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Fixtures/ProduitsFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.test" beforeDir="false" afterPath="$PROJECT_DIR$/.env.test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sf7_cda_adonis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sf7_cda_adonis.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/reference.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/reference.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/importmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.dist.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.dist.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProduitsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProduitsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/CommandeDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/CommandeDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Commandes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Commandes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Distributeurs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Distributeurs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Images.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Images.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Produits.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Produits.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/References.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/References.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/navbar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/produits/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/produits/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/produits/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/produits/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,8 +265,23 @@
       <workItem from="1770217294808" duration="7154000" />
       <workItem from="1770283481973" duration="7539000" />
       <workItem from="1770310228184" duration="18000" />
-      <workItem from="1770314865232" duration="3113000" />
+      <workItem from="1770314865232" duration="3603000" />
     </task>
+    <task id="LOCAL-00001" summary="Mise en place des WebTestCase -&gt; Api platform et ApitestCase">
+      <created>1770318369032</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1770318369032</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Mise en place des WebTestCase -&gt; Api platform et ApitestCase">
+      <created>1770318436639</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1770318436639</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +292,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -314,6 +313,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Mise en place des WebTestCase -&gt; Api platform et ApitestCase" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mise en place des WebTestCase -&gt; Api platform et ApitestCase" />
   </component>
   <component name="WindowStateProjectService">
     <state x="770" y="394" key="#Composer" timestamp="1767874120405">
